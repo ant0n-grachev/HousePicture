@@ -49,7 +49,7 @@ public class Picture
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
-            sun.makeVisible();
+            // sun.makeVisible();
             drawn = true;
         }
     }
