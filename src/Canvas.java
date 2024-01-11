@@ -18,8 +18,8 @@ public class Canvas
     public static Canvas getCanvas()
     {
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300,
-                    Color.white);
+            canvasSingleton = new Canvas("House Picture", 500, 300,
+                    Color.blue);
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;

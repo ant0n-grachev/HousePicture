@@ -1,9 +1,15 @@
 public class Picture
 {
-    private Square wall;
-    private Square window;
+    private Square building;
+    private Square door;
     private Triangle roof;
     private Circle sun;
+    private Square window1;
+    private Square window2;
+    private Square window3;
+    private Square chimney;
+    private Circle smoke;
+    private Square garden;
     private boolean drawn;
 
     /**
@@ -11,10 +17,16 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
+        building = new Square();
+        door = new Square();
         roof = new Triangle();
         sun = new Circle();
+        window1 = new Square();
+        window2 = new Square();
+        window3 = new Square();
+        chimney = new Square();
+        smoke = new Circle();
+        garden = new Square();
         drawn = false;
     }
 
@@ -29,27 +41,46 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.makeVisible();
+            // Building
+            building.changeColor("black");
+            building.moveVertical(20);
+            building.changeSize(150);
+            building.makeVisible();
 
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
-
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-100);
+            // Roof
+            roof.changeColor("red");
+            roof.changeSize(80, 200);
+            roof.moveHorizontal(175);
+            roof.moveVertical(-80);
             roof.makeVisible();
 
+            // Window
+            window1.changeColor("white");
+            window1.moveHorizontal(50);
+            window1.moveVertical(50);
+            window1.changeSize(50);
+            window1.makeVisible();
+
+            // Chimney
+            chimney.changeColor("red");
+            chimney.moveHorizontal(105);
+            chimney.moveVertical(-40);
+            chimney.changeSize(20);
+            chimney.makeVisible();
+
+            // Sun
             sun.changeColor("yellow");
-            sun.moveHorizontal(100);
+            sun.moveHorizontal(-100);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+
+            // Garden
+            garden.changeColor("green");
+            garden.moveVertical(160);
+            garden.moveHorizontal(-350);
+            garden.changeSize(600);
+            garden.makeVisible();
             drawn = true;
         }
     }
@@ -57,6 +88,7 @@ public class Picture
     /**
      * Change this picture to black/white display
      */
+    /*
     public void setBlackAndWhite()
     {
         wall.changeColor("black");
@@ -64,10 +96,12 @@ public class Picture
         roof.changeColor("black");
         sun.changeColor("black");
     }
+     */
 
     /**
      * Change this picture to use color display
      */
+    /*
     public void setColor()
     {
         wall.changeColor("red");
@@ -75,4 +109,5 @@ public class Picture
         roof.changeColor("green");
         sun.changeColor("yellow");
     }
+     */
 }
